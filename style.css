@@ -1,0 +1,86 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background-color: #fefefe;
+    color: #222;
+  }
+  
+  /* Header Styles */
+  header {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 2rem 1rem;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #343a40;
+    padding: 1rem;
+  }
+  nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  nav a:hover {
+    background-color: #495057;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 2rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    color: #343a40;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Card Styles */
+  .project, .cert, .skill, .intern {
+    background-color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+  }
+  .project:hover, .cert:hover, .skill:hover, .intern:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+  }
+  footer a {
+    color: #f8f9fa;
+    text-decoration: underline;
+  }
+  
