@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جاسر زياد العقاد - سيرة ذاتية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- حذف كائن الترجمات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- إضافة Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    
+    <nav class="navbar">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </label>
+        </div>
+        
+        <a href="img/" target="_blank" class="download-cv-btn">
+            <i class="fas fa-file-alt"></i>
+            السيرة الذاتية
+        </a>
+
+        <div class="welcome-quote">
+            كل بداية هي فرصة للإبداع
+        </div>
+        
+        <ul class="nav-links flex-container">
+            <li><a href="#about"><i class="fas fa-user-circle"></i> نبذة عني</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> المهارات</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> التعليم</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> الخبرة</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> المشاريع</a></li>
+            <li><a href="#certificates"><i class="fas fa-certificate"></i> الشهادات</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بي</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <!-- صورة البروفايل -->
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="img/Screenshot_1.png" alt="profile_photo">
+                    <div class="profile-badge" data-translate="availableForWork">متاح للعمل</div>
+                </div>
+            </div>
+
+            <!-- معلومات الترحيب -->
+            <div class="hero-info">
+                <h1 data-translate="name">جاسر زياد العقاد  </h1>
+                <div class="typing-text">
+                    <span class="typed"></span>
+                </div>
+            </div>
+
+            <!-- أزرار التواصل -->
+            <div class="hero-actions">
+                <div class="action-wrapper">
+                    <a href="#contact" class="cta-button primary" data-translate-html="contactMeButton">
+                        <i class="fas fa-paper-plane"></i>
+                        تواصل معي
+                    </a>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مؤشر التمرير -->
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span data-translate="scrollDown">اسحب للأسفل</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="about" class="section-grid">
+            <div class="section-header">
+                <h2><i class="fas fa-user"></i> نبذة عني</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>طالب في تخصص علوم الحاسب بجامعة
+                         أم القرى، مهتم بتطوير البرمجيات وتصميم الحلول التقنية. أمتلك مهارات في تطوير الويب تشمل الجوانب الأمامية (Front-End) والخلفية (Back-End)،
+                         مما يُصنفني كمطور Full Stack.
+                         أتميز بالقدرة على بناء تطبيقات متكاملة، وتحليل المشكلات التقنية، وتقديم حلول فعالة باستخدام أحدث الأدوات والتقنيات في المجال.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <h2><i class="fas fa-tools"></i> المهارات</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card text-align-dynamic"><i class="fas fa-desktop"></i> برامج الأوفيس</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-database"></i> قواعد البيانات</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-code"></i> مطور ويب كامل</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-sync"></i> منهجيات أجايل</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-paint-brush"></i> UI/UX تصميم</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-cloud"></i> الحوسبة السحابية</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-network-wired"></i> أساسيات الشبكات</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-chart-bar"></i> تحليل البيانات</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-database"></i> إدخال البيانات</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-clock"></i> إدارة الوقت</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-comments"></i> مهارات التواصل</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-search"></i> البحث</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-pen"></i> الكتابة</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-puzzle-piece"></i> حل المشكلات</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-check-double"></i> الانتباه للتفاصيل</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-users"></i> العمل الجماعي</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-brain"></i> التفكير النقدي</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-crown"></i> القيادة</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-tasks"></i> إدارة المشاريع</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-lightbulb"></i> الإبداع</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-random"></i> المرونة والتكيف</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-balance-scale"></i> اتخاذ القرار</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-lightbulb"></i> التفكير الإبداعي</div>
+                <div class="skill-card text-align-dynamic"><i class="fas fa-book-reader"></i> التعلم الذاتي</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> التعليم</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="item-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>بكالوريوس علوم الحاسب</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-university"></i>
+                        <p>جامعة أم القرى</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>أغسطس 2022 - يونيو 2026</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-star"></i>
+                        <p>المعدل التراكمي: 3.89</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <h2><i class="fas fa-briefcase"></i> الخبرة العملية</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <div class="item-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>موظف موسمي في قطار المشاعر (SAR)</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>مايو 2024 - يونيو 2024</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-user-tie"></i>
+                        <p>الدور: موظف منطقة الانتظار</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2><i class="fas fa-project-diagram"></i> المشاريع</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-content">
+                <div class="project-item">
+                    <div class="item-header">
+                        <i class="fas fa-hospital"></i>
+                        <h3>نظام إدارة المستشفيات</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-tools"></i>
+                        <p>تطوير نظام شامل باستخدام بايثون لإدارة سجلات المرضى، جدولة المواعيد، وتنفيذ المهام الإدارية.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="item-header">
+                        <i class="fas fa-money-check-alt"></i>
+                        <h3>نظام محاكاة الصراف الآلي</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-tools"></i>
+                        <p>بناء نظام محاكاة للصراف الآلي باستخدام بايثون مع التركيز على الأمان وسهولة الاستخدام.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="item-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>تطبيق ويب كامل</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-tools"></i>
+                        <p>تصميم وتنفيذ تطبيق ويب كامل باستخدام React و Node.js لتعزيز تفاعل المستخدمين وقابلية التوسع.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <div class="section-header">
+                <h2><i class="fas fa-certificate"></i> الشهادات</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-award"></i>
+                        <h3>Certified Scrum Master (CSM) - Professional Certificate</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-building"></i>
+                        <p>IBM SkillsBuild</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-06-14</p>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-code"></i>
+                        <h3>CS50's Web Programming with Python and JavaScript-Professional Certificate</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-university"></i>
+                        <p>Harvard</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-04-02</p>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>شهادة إتمام دورة إلكترونية</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-building"></i>
+                        <p>صندوق تنمية الموارد البشرية (هدف)</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-08-02</p>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-mail-bulk"></i>
+                        <h3>التسويق عبر البريد الإلكتروني</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-building"></i>
+                        <p>صندوق تنمية الموارد البشرية (هدف)</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-09-11</p>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-database"></i>
+                        <h3>دورة أساسيات البيانات</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>IBM SkillsBuild</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-09-05</p>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="item-header">
+                        <i class="fas fa-code"></i>
+                        <h3>أساسيات تطوير الويب</h3>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>IBM SkillsBuild</p>
+                    </div>
+                    <div class="item-details">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>2024-09-05</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2><i class="fas fa-address-card"></i> معلومات الاتصال</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item icon-with-text">
+                        <i class="fas fa-envelope"></i>
+                        <p>gaseraz140@gmail.com</p>
+                    </div>
+                    <div class="contact-item icon-with-text">
+                        <i class="fas fa-phone"></i>
+                        <p>055-704-0229</p>
+                    </div>
+                    <div class="contact-item icon-with-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>مكة المكرمة - حي الشوقية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js"></script>
+    <script src="main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
