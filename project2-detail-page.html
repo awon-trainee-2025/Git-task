@@ -76,7 +76,7 @@
     .back-button {
       background-color: #6A8DFE;
       color: white;
-      padding: 10px 10px;
+      padding: 10px 20px;
       text-align: center;
       border-radius: 6px;
       display: block;
@@ -84,6 +84,46 @@
       width: fit-content;
       text-decoration: none;
     }
+
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 20px; /* Reduce heading size on mobile */
+      }
+
+      .project-details {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+      }
+
+      .project-details .text {
+        font-size: 14px; /* Reduce text size on mobile */
+      }
+
+      .project-details img {
+        max-width: 80%; /* Make images smaller */
+      }
+
+      .back-button {
+        width: 100%; /* Make button full-width on mobile */
+        padding: 15px;
+      }
+
+      p {
+        font-size: 16px; /* Reduce text size for paragraph */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-details .text {
+        font-size: 12px; /* Further reduce text size on very small screens */
+      }
+
+      .back-button {
+        padding: 12px; /* Adjust button size */
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -163,4 +203,4 @@
   </footer>
   
 </body>
-</html>
+</html> 
