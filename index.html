@@ -1,56 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking System</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>خالد الزهراني</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #004d7a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #00395d;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #005f8f;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #004d7a;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d7a;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                border-bottom: 1px solid #006fa3;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex flex-col items-center p-5">
-    <h1 class="text-3xl font-bold mb-4">🚗 Parking System</h1>
-    
-    <div class="bg-white p-6 rounded-xl shadow-lg w-96">
-        <input type="text" id="carNumber" placeholder="Enter Car Number" class="w-full p-2 border rounded mb-2">
-        <button onclick="parkCar()" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Park Car</button>
-        <button onclick="removeCar()" class="bg-red-500 text-white px-4 py-2 rounded w-full mt-2">Remove Car</button>
-    </div>
-    
-    <h2 class="text-xl font-semibold mt-5">🅿 Parking Slots</h2>
-    <div id="parkingSlots" class="grid grid-cols-3 gap-4 mt-4"></div>
-    
-    <script>
-        const totalSlots = 9;
-        let parking = new Array(totalSlots).fill(null);
+<body>
 
-        function renderParking() {
-            const slotsContainer = document.getElementById("parkingSlots");
-            slotsContainer.innerHTML = "";
-            parking.forEach((car, index) => {
-                slotsContainer.innerHTML += `
-                    <div class="w-24 h-24 flex items-center justify-center border rounded-lg ${car ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}">
-                        ${car ? car : 'Empty'}
-                    </div>`;
-            });
-        }
+<header>
+    <h1> مرحباً بك في موقعي الشخصي👤 </h1>
+    <p>أنا خالد رزيق مرزوق الزهراني - طالب علوم حاسب</p>
+</header>
 
-        function parkCar() {
-            const carNumber = document.getElementById("carNumber").value;
-            if (!carNumber) return alert("Please enter a car number!");
-            const emptyIndex = parking.indexOf(null);
-            if (emptyIndex === -1) return alert("No parking slots available!");
-            parking[emptyIndex] = carNumber;
-            renderParking();
-        }
+<nav>
+    <a href="#about">نبذة</a>
+    <a href="#experience">الخبرات</a>
+    <a href="#projects">المشاريع</a>
+    <a href="#contact">التواصل</a>
+</nav>
 
-        function removeCar() {
-            const carNumber = document.getElementById("carNumber").value;
-            const index = parking.indexOf(carNumber);
-            if (index === -1) return alert("Car not found in the parking!");
-            parking[index] = null;
-            renderParking();
-        }
+<section id="about">
+    <h2>نبذة عني</h2>
+    <p>أنا خالد الزهراني، طالب في كلية الحاسب بالليث، متخصص في علوم الحاسب. أطمح إلى تطوير مهاراتي في مجال البرمجة وبناء مشاريع تقنية مميزة.</p>
+</section>
 
-        renderParking();
-    </script>
+<section id="experience">
+    <h2>الخبرات</h2>
+    <ul>
+        <li><strong>العمل الجماعي:</strong> أؤمن بأهمية العمل ضمن فريق لتحقيق أهداف مشتركة، ولدي القدرة على التعاون، وتوزيع المهام، وتحفيز الزملاء.</li>
+
+        <li><strong>مهارات التواصل:</strong> أتمتع بقدرة عالية على التواصل الفعّال مما يساعد على نقل الأفكار بوضوح والعمل بكفاءة ضمن الفريق.</li>
+
+        <li><strong>برامج الأوفيس:</strong> إجادة استخدام مجموعة برامج الأوفيس مثل Word وExcel وPowerPoint في إعداد التقارير وتحليل البيانات وإنشاء العروض التقديمية.</li>
+        <p></p>
+        <li>تصميم واجهات باستخدام HTML وCSS.</li>
+        <li>برمجة بايثون لمهام تحليل البيانات والأتمتة.</li>
+        <li>التعامل مع قواعد البيانات باستخدام SQL.</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>المشاريع</h2>
+    <ul>
+         <li><strong>مشروعي الأول</strong> - نظام مواقف سيارات HTML</li>
+        <li> <strong>مشروعي الثاني</strong> - محاكاة لنظام المطعم  Python </li>
+        <li><strong>مشروعي الثالث</strong>  - قاعدة بيانات للجامعة SQL </li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>التواصل</h2>
+    <p>📞 الهاتف: <strong><a href="tel:+966555478069">0555478069</a></strong></p>
+    <p>📧 البريد الإلكتروني: <strong><a href="mailto:khalid142599@gmail.com">khalid142599@gmail.com</a></strong></p>
+    <p>📍 الموقع: <strong>مكة - العسيلة</strong></p>
+</section>
+
+
+<footer>
+    <p>© 2025 خالد الزهراني. جميع الحقوق محفوظة.</p>
+</footer>
+
 </body>
 </html>
