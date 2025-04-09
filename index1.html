@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remas Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff69b4;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe4ec;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      color: #ff69b4;
+    }
+
+    .intro p {
+      font-size: 1.4rem;
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0;
+      gap: 20px;
+      padding: 25px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .project img {
+      width: 320px;
+      border-radius: 12px;
+    }
+
+    .project-text {
+      flex: 1;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .skill, .course {
+      margin: 15px auto;
+      padding: 18px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .project img {
+        width: 100%;
+      }
+
+      .project-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#courses">Courses</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Welcome To My Portfolio</h1>
+    <p>Remas Alsubhi</p>
+    <p>I'm a Computer Science student at Umm Al-Qura University. Passionate about tech, design, and building creative solutions.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project">
+      <div class="project-text">
+        <h3>Network for Umm Al-Qura University</h3>
+        <p>This project aims to design a secure and efficient network for Umm Al-Qura University. It connects all university buildings and departments through LAN/WAN, routers, switches, access points, and includes IP planning, subnetting, and security protocols.</p>
+      </div>
+      <img src="umm_alqura_network.png" alt="Network Design">
+    </div>
+
+    <div class="project">
+      <div class="project-text">
+        <h3>World of Ideas Library</h3>
+        <p>A digital library built using HTML, CSS, JavaScript, PHP, and MySQL. Features include browsing, searching books, and 24/7 access. Promotes eco-friendliness and supports learning for all age groups.</p>
+      </div>
+      <img src="https://www2.0zz0.com/2025/04/08/17/417723289.jpg" alt="Books Gallery">
+    </div>
+
+    <div class="project">
+      <div class="project-text">
+        <h3>Breast Cancer Diagnosis Dashboard</h3>
+        <p>Interactive dashboard using Streamlit and ML to detect cancer tumors using Decision Tree Classifier. Achieves 94% accuracy, includes visualizations, test cases, and future scalability options.</p>
+      </div>
+      <img src="https://www2.0zz0.com/2025/04/08/17/376745948.png" alt="Dashboard">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">Web Development</div>
+    <div class="skill">Network Design</div>
+    <div class="skill">UI/UX Design</div>
+    <div class="skill">Cybersecurity</div>
+    <div class="skill">Database Management</div>
+    <div class="skill">Git & GitHub</div>
+    <div class="skill">Problem Solving</div>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="course">Cyber Security in Cisco</div>
+    <div class="course">Networking Basics in Cisco</div>
+    <div class="course">HTML Basics</div>
+    <div class="course">JavaScript 101, 102, 103</div>
+    <div class="course">Introduction to CSS</div>
+  </section>
+
+  <footer>
+    <p>Contact: <a href="mailto:Remasalharb55@gmail.com">Remasalharb55@gmail.com</a></p>
+    <div>
+      <a href="#skills">Skills</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#courses">Courses</a>
+    </div>
+    <p>&copy; 2025 Remas Alsubhi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

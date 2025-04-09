@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remas Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #001f3f;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      color: #001f3f;
+    }
+
+    .intro p {
+      font-size: 1.4rem;
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0;
+      gap: 20px;
+      padding: 25px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .project img {
+      width: 320px;
+      border-radius: 12px;
+    }
+
+    .project-text {
+      flex: 1;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .project-text h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #001f3f;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .skill, .course {
+      margin: 15px auto;
+      padding: 18px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .experience-card {
+      background-color: #f0f4fa;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      width: 400px;
+      min-height: 250px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .experience-card:hover {
+      transform: scale(1.05);
+    }
+
+    .experience-card h3 {
+      font-size: 1.8rem;
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .experience-card hr {
+      margin: 12px 0;
+      border: none;
+      height: 2px;
+      background-color: #ccc;
+    }
+
+    .experience-card p {
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-box {
+      background-color: #f8f8f8;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-box i {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .contact-box h4 {
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .contact-box p {
+      font-size: 1.1rem;
+      color: #111;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .project img {
+        width: 100%;
+      }
+
+      .project-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#courses">Courses</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Welcome To My Portfolio</h1>
+    <p>Remas Alsubhi</p>
+    <p>I'm a Computer Science student at Umm Al-Qura University. Passionate about tech, design, and building creative solutions.</p>
+  </section>
+  
+  <section id="projects">
+    <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; color: #001f3f;">Projects</h2>
+  
+    <div class="slider-container">
+      <div class="projects-slider" id="projectsSlider">
+        <div class="project-box">
+          <h3>Network for Umm Al-Qura University</h3>
+          <img src="https://www2.0zz0.com/2025/04/09/17/283551546.png" alt="Network Design" />
+          <p>Designed a secure LAN/WAN network with routers, switches, and wireless access to support digital infrastructure.</p>
+          <div class="tech-stack">
+            <span>Networking</span><span>Subnetting</span><span>Security</span><span>LAN</span><span>WAN</span>
+          </div>
+        </div>
+  
+        <div class="project-box">
+          <h3>World of Ideas Library</h3>
+          <img src="https://www2.0zz0.com/2025/04/08/17/417723289.jpg" alt="Books Gallery" />
+          <p>Digital library for reading and searching books, built with HTML, CSS, JavaScript, PHP, and MySQL.</p>
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+          </div>
+        </div>
+  
+        <div class="project-box">
+          <h3>Breast Cancer Diagnosis Dashboard</h3>
+          <img src="https://www2.0zz0.com/2025/04/08/17/376745948.png" alt="Dashboard" />
+          <p>ML dashboard to predict tumor type using Decision Tree, with visualizations and 94% accuracy.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Streamlit</span><span>ML</span><span>Plotly</span><span>Decision Tree</span>
+          </div>
+        </div>
+  
+        <div class="project-box">
+          <h3>Temperature-Based Fan Controller</h3>
+          <img src="https://www2.0zz0.com/2025/04/09/17/238300914.jpg" alt="Fan Controller" />
+          <p>Arduino system that adjusts fan speed based on temperature using sensors and real-time display.</p>
+          <div class="tech-stack">
+            <span>Arduino</span><span>Sensors</span><span>LCD</span><span>C++</span><span>Embedded</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- النقاط -->
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+  
+  <style>
+    #projects {
+      padding: 60px;
+      background-color: #f0f9ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  
+    .slider-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  
+    .projects-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+  
+    .projects-slider::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .project-box {
+      width: 100%;
+      max-width: 550px; /* أقصى عرض للعنصر */
+      min-width: 250px; /* أقل عرض ممكن في الجوال */
+      margin: 0 10px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .project-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+  
+    .project-box img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+  
+    .project-box h3 {
+      font-size: 1.6rem;
+      color: #001f3f;
+      margin-bottom: 15px;
+    }
+  
+    .project-box p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+  
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .tech-stack span {
+      background-color: #e6f0ff;
+      color: #003366;
+      font-size: 0.95rem;
+      padding: 8px 15px;
+      border-radius: 15px;
+      font-weight: 600;
+    }
+  
+    /* النقاط */
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      gap: 10px;
+    }
+  
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      transition: transform 0.3s, background-color 0.3s;
+      cursor: pointer;
+    }
+  
+    .dot:hover {
+      transform: scale(1.5);
+    }
+  
+    .dot.active {
+      background-color: #001f3f;
+    }
+  
+    /* Media queries لتناسب الشاشات الصغيرة والكبيرة */
+    @media (max-width: 768px) {
+      .projects-slider {
+        flex-wrap: wrap; /* تغيير ترتيب العناصر لتناسب الجوال */
+      }
+      .project-box {
+        max-width: 90%; /* عرض العناصر بنسبة 90% من الشاشة */
+        margin: 0 5%;
+      }
+    }
+  
+    @media (min-width: 769px) {
+      .projects-slider {
+        flex-wrap: nowrap; /* إبقاء العناصر في سطر واحد للعرض الكبير */
+      }
+      .project-box {
+        max-width: 550px;
+        margin: 0 20px;
+      }
+    }
+  </style>
+  
+  <script>
+    const slider = document.getElementById("projectsSlider");
+    const dotsContainer = document.getElementById("sliderDots");
+    const projectBoxes = document.querySelectorAll(".project-box");
+    const totalProjects = projectBoxes.length;
+  
+    let currentIndex = 0;
+  
+    
+    for (let i = 0; i < totalProjects; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+  
+    const dots = document.querySelectorAll(".dot");
+  
+    function updateDots(index) {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+  
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalProjects;
+      const boxWidth = projectBoxes[0].offsetWidth + 20;
+      slider.scrollTo({
+        left: currentIndex * boxWidth,
+        behavior: "smooth"
+      });
+      updateDots(currentIndex);
+    }
+  
+   
+    let autoScroll = setInterval(autoSlide, 4000);
+  
+   
+    slider.addEventListener("mouseenter", () => clearInterval(autoScroll));
+    slider.addEventListener("mouseleave", () => {
+      autoScroll = setInterval(autoSlide, 4000);
+    });
+  
+   
+    slider.addEventListener("scroll", () => {
+      const scrollLeft = slider.scrollLeft;
+      const boxWidth = projectBoxes[0].offsetWidth + 20;
+      const index = Math.round(scrollLeft / boxWidth);
+      currentIndex = index;
+      updateDots(index);
+    });
+  
+   
+    dots.forEach((dot, i) => {
+      dot.addEventListener("mouseenter", () => {
+        currentIndex = i;
+        const boxWidth = projectBoxes[0].offsetWidth + 20;
+        slider.scrollTo({
+          left: currentIndex * boxWidth,
+          behavior: "smooth"
+        });
+        updateDots(currentIndex);
+      });
+    });
+  </script>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill" data-skill="Web Development">
+        <img src="https://cdn-icons-png.flaticon.com/512/2621/2621314.png" alt="Web Development" />
+        <span>Web Development</span>
+      </div>
+      <div class="skill" data-skill="Network Design">
+        <img src="https://cdn-icons-png.flaticon.com/512/3647/3647471.png" alt="Network Design" />
+        <span>Network Design</span>
+      </div>
+      <div class="skill" data-skill="UI/UX Design">
+        <img src="https://cdn-icons-png.flaticon.com/512/170/170204.png" alt="UI/UX Design" />
+        <span>UI/UX Design</span>
+      </div>
+      <div class="skill" data-skill="Cybersecurity">
+        <img src="https://cdn-icons-png.flaticon.com/512/3095/3095155.png" alt="Cybersecurity" />
+        <span>Cybersecurity</span>
+      </div>
+      <div class="skill" data-skill="Database Management">
+        <img src="https://www2.0zz0.com/2025/04/09/16/613488958.jpg" alt="Database Management" />
+        <span>Database Management</span>
+      </div>
+      <div class="skill" data-skill="Git & GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Git & GitHub" />
+        <span>Git & GitHub</span>
+      </div>
+      <div class="skill" data-skill="Problem Solving">
+        <img src="https://cdn-icons-png.flaticon.com/512/3067/3067356.png" alt="Problem Solving" />
+        <span>Problem Solving</span>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    #skills {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  
+    #skills h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #003366;
+      font-weight: 700;
+    }
+  
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .skill {
+      width: 140px;
+      height: 180px;
+      background-color: #E6F2FF;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+      font-size: 0.9rem;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .skill img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  
+    .skill:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .skill:active {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .skill span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+    }
+  </style>
+  
+  <script>
+    const skills = document.querySelectorAll('.skill');
+  
+    skills.forEach(skill => {
+      skill.addEventListener('click', () => {
+        alert(`You selected: ${skill.dataset.skill}`);
+        skill.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+          skill.style.transform = 'scale(1)';
+        }, 200);
+      });
+    });
+  </script>
+
+<section id="courses">
+    <h2>Courses</h2>
+    <div class="courses-grid">
+      <div class="course-box">
+        <div class="icon-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/1006/1006360.png" alt="Cybersecurity" />
+        </div>
+        <p>Cyber Security in Cisco</p>
+      </div>
+      <div class="course-box">
+        <div class="icon-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/3079/3079041.png" alt="Networking" />
+        </div>
+        <p>Networking Basics in Cisco</p>
+      </div>
+      <div class="course-box">
+        <div class="icon-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="HTML" />
+        </div>
+        <p>HTML Basics</p>
+      </div>
+      <div class="course-box">
+        <div class="icon-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript" />
+        </div>
+        <p>JavaScript 101, 102, 103</p>
+      </div>
+      <div class="course-box">
+        <div class="icon-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS" />
+        </div>
+        <p>Introduction to CSS</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    #courses {
+      padding: 60px 20px;
+      background-color: #fff;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  
+    #courses h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #003366;
+      font-weight: 700;
+    }
+  
+    .courses-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+  
+    .course-box {
+      background-color: #ffffff;
+      border-radius: 20px;
+      width: 240px;
+      height: 280px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .course-box:hover {
+      transform: scale(1.05);
+    }
+  
+    .icon-wrapper {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .icon-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  
+    .course-box p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #333;
+      margin: 0;
+    }
+  </style
+
+  <section id="experiences">
+    <h2 style="font-size: 2.2rem; margin-bottom: 30px;">Experiences</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
+      <div class="experience-card">
+        <h3>🏢 Mobily</h3>
+        <hr>
+        <p>Seasonal SIM card saleswoman during Hajj season.</p>
+      </div>
+      <div class="experience-card">
+        <h3>🖥️ Awon Technology</h3>
+        <hr>
+        <p>CO-OP Intern – Trainee at Awon Tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HTML -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <i class="fas fa-phone-alt"></i>
+      <h4>Phone</h4>
+      <p>0553029956</p>
+    </div>
+    <div class="contact-box">
+      <i class="fas fa-envelope"></i>
+      <h4>Email</h4>
+      <p>Remasalharb55@gmail.com</p>
+    </div>
+    <div class="contact-box">
+      <i class="fas fa-map-marker-alt"></i>
+      <h4>Location</h4>
+      <p>Makkah, Saudi Arabia</p>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+#contact {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  margin-top: 80px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #001f3f; 
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px 25px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-box i {
+  font-size: 36px;
+  color: #001f3f; 
+  margin-bottom: 10px;
+}
+
+.contact-box h4 {
+  font-size: 18px;
+  color: #001f3f;
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  font-size: 15px;
+  color: #333;
+  word-break: break-word;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<footer>
+    <p>&copy; 2025 Remas Alsubhi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
