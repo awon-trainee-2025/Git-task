@@ -17,7 +17,7 @@ function App() {
       <div className="min-h-screen bg-navy-900 text-white flex">
         {/* Fixed Sidebar */}
         <div className="w-64 bg-navy-800 fixed h-full p-6">
-          <h1 className="text-3xl font-bold italic mb-12">Ahmad</h1>
+          <h1 className="text-3xl font-bold italic mb-12">Portfolio</h1>
           
           <nav className="space-y-4">
             <NavLink to="/" className={({ isActive }) => 
@@ -86,7 +86,7 @@ function App() {
           </nav>
 
           <div className="absolute bottom-4 left-0 right-0 text-center text-sm text-gray-400">
-            copyright © Ahmad 2024 Portfolio
+            copyright © Ahmad 2025 Portfolio
           </div>
         </div>
 
