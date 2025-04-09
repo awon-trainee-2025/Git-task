@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naba's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0a0f2c, #1d263b);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-image: url('BACKGROUND1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    section {
+      margin-bottom: 50px;
+      animation: fadeInUp 1s ease-in;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "★ ";
+      color: #5bc0be;
+    }
+
+    a {
+      color: #5bc0be;
+      text-decoration: none;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background-color: #172a45;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: #0a0f2c;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+    }
+
+    .popup-content h3 {
+      margin-top: 0;
+    }
+
+    .close-popup {
+      float: right;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="PICTURS.jpg" alt="Naba Logo" style="height: 80px;" />
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm Naba, an AI student who loves building creative tech projects.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>I'm currently studying Artificial Intelligence at Umm Al-Qura University. I enjoy working on computer vision, NLP, and web projects. I love participating in hackathons and tech challenges. My goal is to work at a big tech company!</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+        <li>Machine Learning</li>
+        <li>Natural Language Processing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project" onclick="openPopup('popup1')">
+          <h3>Hotel Reservation Cancellation Prediction</h3>
+        </div>
+        <div class="project" onclick="openPopup('popup2')">
+          <h3>Cash Wise – Finance Management Software</h3>
+        </div>
+        <div class="project" onclick="openPopup('popup3')">
+          <h3>Image Enhancement for Medical Radiology</h3>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email me at: <a href="mailto:nabaabdulrahman85@gmail.com">nabaabdulrahman85@gmail.com</a></p>
+    </section>
+  </div>
+
+  <!-- POPUPS -->
+  <div id="popup1" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" onclick="closePopup('popup1')">&times;</span>
+      <h3>Hotel Reservation Cancellation Prediction</h3>
+      <p>Built predictive models using WEKA and classifiers like ZeroR and Decision Tree to improve reservation precision and reduce cancellations.</p>
+    </div>
+  </div>
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" onclick="closePopup('popup2')">&times;</span>
+      <h3>Cash Wise – Finance Management Software</h3>
+      <p>Created a Bash-based tool for budgeting, debt tracking, and file-based reporting with a focus on simplicity and utility.</p>
+    </div>
+  </div>
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" onclick="closePopup('popup3')">&times;</span>
+      <h3>Image Enhancement for Medical Radiology</h3>
+      <p>Developed a MATLAB GUI for improving medical image quality using Gaussian filtering, histogram equalization, and edge detection techniques.</p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
