@@ -1,0 +1,147 @@
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #2c3e50;
+    line-height: 1.8;
+  }
+  
+  /* ترويسة الموقع */
+  header {
+    background-color: #ffffff;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  /* الأقسام */
+  section {
+    padding: 40px 25px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  }
+  
+  h2 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 24px;
+    color: #1e6fa4;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1e6fa4;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  /* النصوص */
+  p {
+    font-size: 15px;
+    color: #555;
+  }
+  
+  /* البوكس */
+  .box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+  
+  .project-img, .certificate-img {
+    width: 80%; /* تحديد عرض الصور بنسبة 80% من عرض الحاوية */
+    height: auto; /* الحفاظ على نسبة العرض والارتفاع */
+    max-width: 300px; /* تحديد أقصى عرض للصور */
+    border-radius: 10px; /* تدوير الحواف */
+    margin-bottom: 10px; /* مسافة بين الصور */
+    transition: transform 0.3s ease; /* تأثير التحويل عند التفاعل */
+    display: block; /* التأكد من أن الصورة تتناسب مع الحاوية */
+    margin-left: auto; /* محاذاة الصورة في المنتصف */
+    margin-right: auto; /* محاذاة الصورة في المنتصف */
+  }
+  
+  .project-img:hover, .certificate-img:hover {
+    transform: scale(1.05);
+  }
+
+  .phone-img {
+    max-width: 220px;
+    max-height: 280px;
+    display: block; /* التأكد من أن الصورة تتناسب مع الحاوية */
+    margin-left: auto; /* محاذاة الصورة في المنتصف */
+    margin-right: auto; /* محاذاة الصورة في المنتصف */
+
+  }
+  
+  /* الشبكة */
+  .projects, .certificates, .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* تنسيق اللوجو */
+  .logo {
+    width: 300px; /* تحديد عرض اللوجو */
+    height: auto; /* الحفاظ على نسبة الارتفاع والعرض */
+    margin-right: 10px; /* مسافة بين اللوجو والنص */
+    vertical-align: middle; /* محاذاة اللوجو مع النص */
+  }
+  
+  
+  /* الفوتر */
+  footer {
+    background-color: #1e6ea48a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* الروابط */
+  a {
+    color: #1e6fa4;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    color: #17a589;
+  }
+  
+  /* موبايل */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 26px;
+    }
+  
+    section {
+      padding: 25px 15px;
+    }
+}
