@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import { User, Code, Briefcase, Award, FolderGit2, Users2, Mail } from 'lucide-react';
+import { HashRouter as Router } from 'react-router-dom';
 
 // Pages
 import AboutMe from './pages/AboutMe';
