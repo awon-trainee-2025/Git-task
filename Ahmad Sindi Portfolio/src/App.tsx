@@ -20,7 +20,7 @@ function App() {
           <h1 className="text-3xl font-bold italic mb-12">Portfolio</h1>
           
           <nav className="space-y-4">
-            <NavLink to="/" className={({ isActive }) => 
+            <NavLink to="/aboutme" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -93,7 +93,7 @@ function App() {
         {/* Content Area */}
         <div className="ml-64 flex-1 p-8 bg-blue-50">
           <Routes>
-            <Route path="/Aboutme" element={<AboutMe />} />
+            <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/experiences" element={<Experiences />} />
             <Route path="/certificates" element={<Certificates />} />
