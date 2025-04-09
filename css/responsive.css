@@ -1,0 +1,152 @@
+/* ====================
+   Responsive CSS File
+   By: Fanar Alsulami
+   ==================== */
+
+/* Devices <= 1200px (Large tablets, small laptops) */
+@media (max-width: 1200px) {
+    .main-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  
+    .main-container .content,
+    .main-container .image {
+      width: 100%;
+    }
+  
+    .skills .skills-details {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .skills-details .text,
+    .skills-details .boxes {
+      width: 100%;
+    }
+  }
+  
+@media (max-width:1000px) {
+    .about .about-details {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about .about-details .left{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        width: 100%;
+    }
+    .about-details .right{
+        width: 90%;
+        margin: 40px 0;
+    }
+    .projects .boxes .box {
+        margin: 20px 0;
+        width: calc(100%/2 - 20px);
+    }
+}
+
+
+  
+  /* Devices <= 992px (Tablets) */
+  @media (max-width: 992px) {
+    nav .nav-container {
+      flex-direction: column;
+    }
+  
+    .nav-container .nav-links {
+      display: none;
+    }
+  
+    .nav-links-mobile {
+      transform: translateY(0);
+      display: block;
+    }
+  
+    .about .about-details {
+      flex-direction: column;
+    }
+  
+    .about .about-details .left,
+    .about .about-details .right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .about .left img {
+      width: 80%;
+      height: auto;
+    }
+  }
+  
+  /* Devices <= 768px (Phones) */
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .content .typewriter {
+      font-size: 1.5rem;
+    }
+  
+    .content p {
+      font-size: 1rem;
+    }
+  
+    .social-links {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+  
+    .contact-details {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .contact-details .left,
+    .contact-details .right {
+      width: 100%;
+    }
+  }
+  
+  /* Devices <= 480px (Small phones) */
+  @media (max-width: 480px) {
+    .content h1 {
+      font-size: 1.4rem;
+    }
+  
+    .content .typewriter {
+      font-size: 1.2rem;
+    }
+  
+    .content button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .skills-details .experience .num {
+      font-size: 40px;
+    }
+  
+    .skills-details .experience .exp {
+      font-size: 14px;
+    }
+  
+    .skills-details .boxes .per {
+      font-size: 40px;
+    }
+  
+    footer .footer-container {
+      text-align: center;
+    }
+  
+    .footer-container .social-links {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  

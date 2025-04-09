@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title> Portfolio </title> 
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <span>FANAR</span>
+    </div>
+    <div class="nav-links">
+      <div class="link"><a href="#home">Home</a></div>
+      <div class="link"><a href="#about">About</a></div>
+      <div class="link"><a href="#skills">Skills</a></div>
+      <div class="link"><a href="#projects">Projects</a></div>
+      <div class="link"><a href="#contact">Contact</a></div>
+    </div>
+    <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+  </div>
+
+  <div class="nav-links-mobile">
+    <div class="link">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section>
+  <div class="main-container">
+    <div class="image">
+      <img src="images\logo.jpeg" alt="logo" />
+    </div>
+      <div class="content">
+        <h1 data-aos="fade-left">Hi I'm <span>FanarAlsulami</span></h1>
+        <div class="typewriter">I'm a <span class="typewriter-text"></span><span class="cursor">|</span></div>
+        <p> Computer Science student at Umm Al-Qura University with a passion for cybersecurity and protecting information. I enjoy coding, solving problems, and always look forward to learning and making the digital world a safer place.</p>
+        <div class="social-links">
+         <a href="https://github.com/F37214453"><i class="fa-brands fa-github"></i></a> 
+         <a href="https://www.linkedin.com/in/fanarkhalafalsulami"><i class="fa-brands fa-linkedin"></i></a>
+         <a href="https://x.com/fanar_alsulami?s=21"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="btn">
+          <a href="FanarAlsulamiCV.pdf" download></a>
+          <button>Download My CV</button>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About Me</span></div>
+    <div class="about-details">
+      <div class="left">
+        <img src="images/logo.jpeg" alt="logo" />
+      </div>
+      <div class="right">
+        <div class="topic">A dedicated Computer Science student with a strong drive to excel and continuously grow.</div>
+        <p>I’m a Computer Science student at Umm Al-Qura University with a big passion for cybersecurity and keeping information safe.
+           I enjoy coding in Java and creating websites with HTML, and I love finding creative solutions to problems.
+            I’m always excited to learn new things and work with a team to bring ideas to life and make the digital world a safer place!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <div class="content">
+    <div class="title"><span>My Skills</span></div>
+    <div class="skills-details">
+      <div class="text">
+        <div class="topic">Here are some of the key skills I’ve developed through my studies, projects, and personal learning journey:</div>
+        <div class="experience">
+          <div class="num">4</div>
+          <div class="exp">Years of<br/>Experience</div>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+          <div class="topic">HTML</div>
+          <div class="progress-bar">
+            <div class="fill" style="width: 90%;"></div>
+          </div>
+          <div class="per">90%</div>
+        </div>
+        <div class="box">
+          <div class="topic">CSS</div>
+          <div class="progress-bar">
+            <div class="fill" style="width: 80%;"></div>
+          </div>
+          <div class="per">80%</div>
+        </div>
+        <div class="box">
+          <div class="topic">Java</div>
+          <div class="progress-bar">
+            <div class="fill" style="width: 70%;"></div>
+          </div>
+          <div class="per">70%</div>
+        </div>
+        <div class="box">
+          <div class="topic">JavaFX</div>
+          <div class="progress-bar">
+            <div class="fill" style="width: 91%;"></div>
+          </div>
+          <div class="per">91%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <div class="content">
+    <div class="title"><span>My Projects</span></div>
+    <div class="text">
+      <div class="topic">Skills Reflect Our KnowledgeA glimpse into some of the projects <br/>I’ve worked on — each one a step forward in my learning journey:</div>
+    </div>
+    <div class="boxes">
+      <div class="box">
+        <div class="icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <div class="topic">Employment Office Database System</div>
+        <p>Created a structured SQL-based database to manage job seekers, employers, and job listings efficiently.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <i class="fas fa-solid fa-code"></i>
+        </div>
+        <div class="topic">Book Library Application</div>
+        <p>Built a JavaFX desktop app with Hibernate integration to manage books, borrowing, and returns through a dynamic UI and connected database.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <i class="fas fa-solid fa-mobile-screen"></i>
+        </div>
+        <div class="topic">Encryption Algorithms with Client/Server Programming
+        </div>
+        <p>Developed a Java-based secure messaging system using encryption algorithms and client/server architecture for real-time communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="content">
+    <div class="title"><span>Contact Me</span></div>
+    <div class="contact-details">
+      <div class="left">
+        <div class="topic">I’d love to hear from you!</div>
+        <p>If you have any questions, ideas, or collaboration opportunities, feel free to reach out using the form below.
+          I’ll get back to you as soon as possible.</p>
+      </div>
+      <div class="right">
+        <form id="contact-form" >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea cols="30" rows="10" name="message" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <div class="title"><span>Fanar Alsulami</span></div>
+    <p>Web developer passionate about creating elegant and responsive websites.</p>
+    <div class="social-links">
+      <a href="https://github.com/F37214453"><i class="fa-brands fa-github"></i></a> 
+      <a href="https://www.linkedin.com/in/fanarkhalafalsulami"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/fanar_alsulami?s=21"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="bottom">
+    <p>Copyright &copy; 2025 Fanar Alsulami. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
