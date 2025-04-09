@@ -1,6 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import { User, Code, Briefcase, Award, FolderGit2, Users2, Mail } from 'lucide-react';
-import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 // Pages
 import AboutMe from './pages/AboutMe';
@@ -13,14 +13,14 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Git-task"> {/* Use basename to specify the subdirectory */}
       <div className="min-h-screen bg-navy-900 text-white flex">
         {/* Fixed Sidebar */}
         <div className="w-64 bg-navy-800 fixed h-full p-6">
           <h1 className="text-3xl font-bold italic mb-12">Portfolio</h1>
           
           <nav className="space-y-4">
-            <NavLink to="/" className={({ isActive }) => 
+            <NavLink to="/Git-task/" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -29,7 +29,7 @@ function App() {
               <span>About me</span>
             </NavLink>
 
-            <NavLink to="/skills" className={({ isActive }) => 
+            <NavLink to="/Git-task/skills" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -38,7 +38,7 @@ function App() {
               <span>Skills</span>
             </NavLink>
 
-            <NavLink to="/experiences" className={({ isActive }) => 
+            <NavLink to="/Git-task/experiences" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -47,7 +47,7 @@ function App() {
               <span>Experiences</span>
             </NavLink>
 
-            <NavLink to="/certificates" className={({ isActive }) => 
+            <NavLink to="/Git-task/certificates" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -56,7 +56,7 @@ function App() {
               <span>Certificates</span>
             </NavLink>
 
-            <NavLink to="/projects" className={({ isActive }) => 
+            <NavLink to="/Git-task/projects" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -65,8 +65,8 @@ function App() {
               <span>Projects</span>
             </NavLink>
 
-             {/* Uncomment when you get partners :) */}    
-            {/* <NavLink to="/partners" className={({ isActive }) => 
+            {/* Uncomment when you get partners :) */}
+            {/* <NavLink to="/Git-task/partners" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -75,7 +75,7 @@ function App() {
               <span>Partners</span>
             </NavLink> */}
 
-            <NavLink to="/contact" className={({ isActive }) => 
+            <NavLink to="/Git-task/contact" className={({ isActive }) => 
               `flex items-center space-x-3 p-3 rounded-lg transition-all ${
                 isActive ? 'bg-navy-700 text-blue-400' : 'hover:bg-navy-700'
               }`
@@ -93,13 +93,13 @@ function App() {
         {/* Content Area */}
         <div className="ml-64 flex-1 p-8 bg-blue-50">
           <Routes>
-            <Route path="/" element={<AboutMe />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experiences" element={<Experiences />} />
-            <Route path="/certificates" element={<Certificates />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/partners" element={<Partners />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/Git-task/" element={<AboutMe />} />
+            <Route path="/Git-task/skills" element={<Skills />} />
+            <Route path="/Git-task/experiences" element={<Experiences />} />
+            <Route path="/Git-task/certificates" element={<Certificates />} />
+            <Route path="/Git-task/projects" element={<Projects />} />
+            <Route path="/Git-task/partners" element={<Partners />} />
+            <Route path="/Git-task/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
