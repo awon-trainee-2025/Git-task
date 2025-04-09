@@ -165,7 +165,53 @@
     .certificate:hover img {
       opacity: 0.8;
     }
-    
+
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 20px; /* Reduce heading size on mobile */
+      }
+
+      .project-card {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+      }
+
+      .project-card img {
+        max-width: 80%; /* Make images smaller */
+      }
+
+      .tabs {
+        flex-direction: column;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills vertically on smaller screens */
+      }
+
+      .back-button {
+        width: 100%; /* Make button full-width on mobile */
+        padding: 15px;
+      }
+
+      p {
+        font-size: 16px; /* Reduce text size for paragraph */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-card h3 {
+        font-size: 18px; /* Further reduce font size */
+      }
+
+      .skill-card h3 {
+        font-size: 16px; /* Further reduce skill card font size */
+      }
+
+      .back-button {
+        padding: 12px; /* Adjust button size */
+      }
+    }
   </style>
 </head>
 <body>
@@ -184,7 +230,7 @@
   <section>
     <h2>عنّي</h2>
     <p>
-أنا سدين القرشي، طالبة في تخصص تفاعل الانسان مع الحاسب (HCI) بجامعة أم القرى بمكة المكرمة.<br>
+      أنا سدين القرشي، طالبة في تخصص تفاعل الانسان مع الحاسب (HCI) بجامعة أم القرى بمكة المكرمة.<br>
       أركز في شغلي على تصميم واجهات بسيطة، مرتبة، وواضحة… واجهات تخدم الناس وتسهّل عليهم تجربة التقنية دون تعقيد.<br>
       أكثر ما يشدني في التصميم هو التفاصيل الصغيرة التي تحدث فرقاً كبيراً في تجربة المستخدم، وتُشعره بأن التقنية تفهمه وتُلبّي احتياجاته.<br>
       أشتغل بشغف وأسعى دائمًا إلى تطوير نفسي، لأن كل مشروع بالنسبة لي هو فرصة لتعلم شيء جديد وتحقيق الإتقان في عملي.
@@ -338,30 +384,30 @@
     </div>
   </div>
 
-<footer style="background-color: #eae6f5; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); margin-top: 50px;">
-  <h3>تواصل معي</h3>
-  <p style="font-size: 16px; color: #583780;">
-   يمكنك التواصل معي عبر الطرق التالية
-  </p>
-  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-    <div>
-      <strong>Email:</strong>
-      <a href="mailto:sadeen.al.qurashi@hotmail.com" style="color: #6A8DFE;">sadeen.al.qurashi@hotmail.com</a>
+  <footer style="background-color: #eae6f5; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); margin-top: 50px;">
+    <h3>تواصل معي</h3>
+    <p style="font-size: 16px; color: #583780; text-align: center;">
+      يمكنك التواصل معي عبر الطرق التالية
+    </p>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <div>
+        <strong>Email:</strong>
+        <a href="mailto:sadeen.al.qurashi@hotmail.com" style="color: #6A8DFE;">sadeen.al.qurashi@hotmail.com</a>
+      </div>
+      <div>
+        <strong>Phone:</strong>
+        <a href="tel:+966544723174" style="color: #6A8DFE;">+966544723174</a>
+      </div>
+      <div>
+        <strong>X:</strong>
+        <a href="https://x.com/1s_hci?s=21&t=z0ackoUlsELCivS4iQ961g" target="_blank" style="color: #6A8DFE;">@1S_HCI</a>
+      </div>
     </div>
-    <div>
-      <strong>Phone:</strong>
-      <a href="tel:+966544723174" style="color: #6A8DFE;">+966544723174</a>
-    </div>
-    <div>
-      <strong>X:</strong>
-      <a href="https://x.com/1s_hci?s=21&t=z0ackoUlsELCivS4iQ961g" target="_blank" style="color: #6A8DFE;">@1S_HCI</a>
-    </div>
-  </div>
-  <p style="font-size: 14px; color: #583780;">
-    &copy; 2025 جميع الحقوق محفوظة لسدين القرشي
-  </p>
-</footer>
-
+    <p style="font-size: 14px; color: #583780; text-align: center;">
+      &copy; 2025 جميع الحقوق محفوظة لسدين القرشي
+    </p>
+  </footer>
+  
   <script>
     // التبديل بين التابز
     document.getElementById("technical-tab").onclick = function() {
