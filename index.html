@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center p-5">
+    <h1 class="text-3xl font-bold mb-4">🚗 Parking System</h1>
+    
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96">
+        <input type="text" id="carNumber" placeholder="Enter Car Number" class="w-full p-2 border rounded mb-2">
+        <button onclick="parkCar()" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Park Car</button>
+        <button onclick="removeCar()" class="bg-red-500 text-white px-4 py-2 rounded w-full mt-2">Remove Car</button>
+    </div>
+    
+    <h2 class="text-xl font-semibold mt-5">🅿 Parking Slots</h2>
+    <div id="parkingSlots" class="grid grid-cols-3 gap-4 mt-4"></div>
+    
+    <script>
+        const totalSlots = 9;
+        let parking = new Array(totalSlots).fill(null);
+
+        function renderParking() {
+            const slotsContainer = document.getElementById("parkingSlots");
+            slotsContainer.innerHTML = "";
+            parking.forEach((car, index) => {
+                slotsContainer.innerHTML += `
+                    <div class="w-24 h-24 flex items-center justify-center border rounded-lg ${car ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}">
+                        ${car ? car : 'Empty'}
+                    </div>`;
+            });
+        }
+
+        function parkCar() {
+            const carNumber = document.getElementById("carNumber").value;
+            if (!carNumber) return alert("Please enter a car number!");
+            const emptyIndex = parking.indexOf(null);
+            if (emptyIndex === -1) return alert("No parking slots available!");
+            parking[emptyIndex] = carNumber;
+            renderParking();
+        }
+
+        function removeCar() {
+            const carNumber = document.getElementById("carNumber").value;
+            const index = parking.indexOf(carNumber);
+            if (index === -1) return alert("Car not found in the parking!");
+            parking[index] = null;
+            renderParking();
+        }
+
+        renderParking();
+    </script>
+</body>
+</html>
