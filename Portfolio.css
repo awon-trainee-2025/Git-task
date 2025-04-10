@@ -1,0 +1,323 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    font-family: 'Poppins', sans-serif;
+    background-color: #DAC1B1; /* Silk */
+    color: #333;
+    line-height: 1.6;
+    padding: 0px; /* Add padding around the body */
+  }
+  
+/* Navigation Bar */
+nav {
+    background-color: #3D0A05; /* Dark Red */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjust padding as needed */
+   
+    border-bottom-left-radius: 20px; /* Soft rounded bottom-left corner */
+    border-bottom-right-radius: 20px; /* Soft rounded bottom-right corner */
+   
+  }
+  
+  nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #DAC1B1; /* Silk */
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #7F1F0E; /* Ruby Red */
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+ /* Hero Section */
+.hero-section {
+    text-align: center;
+    margin: 50px auto; /* Center the hero section and add margin */
+    padding: 20px; /* Add padding inside the section */
+    max-width: 800px; /* Limit the width of the section */
+    background-color: #ffffff; /* خلفية بيضاء لهذا القسم فقط */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    color: #3D0A05; /* Dark Red */
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section button {
+    background-color: #7F1F0E; /* Ruby Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .hero-section button:hover {
+    background-color: #AC746C; /* Indian Red */
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Container for the project cards */
+.project-container {
+    display: flex;
+    flex-direction: row; /* Align cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if space is needed */
+    justify-content: space-between; /* Space between cards */
+    gap: 10px; /* Reduced space between cards */
+    margin:70px; /* Space between cards and screen edges */
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically inside each card */
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Make card take full available width */
+    max-width: 320px; /* Limit the width of the cards */
+    margin-bottom: 20px; /* Add space between rows of cards */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .project-card div {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    color: #3D0A05;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .project-card a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* About Section */
+  .about {
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+  }
+  
+  .about h1, .about h2 {
+    color: #3D0A05; /* Dark Red */
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    margin-bottom: 15px;
+  }
+  
+  .about ul {
+    list-style: disc inside;
+    padding-left: 20px;
+  }
+  
+  .about ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3D0A05; /* Dark Red */
+    margin-bottom: 20px;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill i {
+    margin-right: 10px;
+    color: #7F1F0E; /* Ruby Red */
+    font-size: 1.2rem;
+  }
+  
+  .skill .progress {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+    margin-top: 10px;
+  }
+  
+  .skill .progress-bar {
+    background-color: #7F1F0E; /* Ruby Red */
+    height: 100%;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Contact Section */
+.contact {
+    max-width: 600px; /* Set maximum width of the contact form */
+    margin: 50px auto; /* Center the form on the page */
+    padding: 20px; /* Add padding inside the form */
+    background-color: #ffffff; /* خلفية بيضاء لنموذج الاتصال */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for a clean look */
+  }
+  .contact h1 {
+    text-align: center; /* Center the title */
+    font-size: 2rem; /* Font size for the title */
+    color: #3D0A05; /* Dark Red */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .contact form {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange items in a column */
+    gap: 15px; /* Add space between form elements */
+  }
+  
+  .contact label {
+    font-size: 1rem; /* Font size for labels */
+    color: #333; /* Dark gray color for text */
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%; /* Make the input and textarea take full width */
+    padding: 10px; /* Add padding inside fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for text inside fields */
+  }
+  
+  .contact textarea {
+    height: 100px; /* Set a fixed height for the textarea */
+    resize: none; /* Disable resizing */
+  }
+  
+  .contact button {
+    background-color: #7F1F0E; /* Ruby Red */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    padding: 10px; /* Add padding inside the button */
+    font-size: 1rem; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .contact button:hover {
+    background-color: #AC746C; /* Indian Red */
+  }
+  
+  .contact #responseMessage {
+    text-align: center; /* Center the success message */
+    margin-top: 10px; /* Add space above the message */
+    font-size: 1rem; /* Font size for message */
+    color: #7F1F0E; /* Ruby Red */
+  }
+  
+ /* Footer */
+footer {
+    text-align: center; /* Center the footer content */
+    padding: 20px 30px; /* إضافة البادينج الجانبي لتوسيع الفوتر من اليمين واليسار */
+    background-color: #3D0A05; /* Dark Red */
+    color: white; /* White text */
+    font-size: 0.9rem; /* Font size for footer text */
+    margin-top: 50px; /* Add space above the footer */
+    border-top-left-radius: 20px; /* Soft rounded top-left corner */
+    border-top-right-radius: 20px; /* Soft rounded top-right corner */
+    width: 100%; /* Ensures footer spans the full width */
+    position: relative; /* Ensures it stays at the bottom */
+  }
+  
+  /* في حالة كنت ترغب في تخصيص صفحة الهوم فقط */
+  .home-footer {
+    margin-top: 142px; /* زيادة المسافة العلوية بين الفوتر والمحتوى في صفحة الهوم */
+  }
