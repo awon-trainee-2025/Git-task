@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Personal Logo2.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section home reveal">
+    <div class="content">
+      <img id="phoP" src="Personal Logo2.png" height="200" width="200" alt="pic">
+      <h2>Hello, I'm mawaddah saad</h2>
+      <p>HCI student passionate about designing interesting and efficient user experiences.</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <section id="about" class="section about reveal">
+    <h2>About Me</h2>
+    <p> I’m a Human computer interaction student, I have experience in using Figma, HTML and css ,developing interfaces and the knowledge of other techniques, I love blending structure and creativity to create work that feels both smart and engaging.</p>
+      <br>
+    <h2>Certificates</h2>
+      <ul class="cert-list">
+        <li>
+          <strong>Web design and programming</strong> – Ustudy – 2023
+        </li>
+        <li>
+          <strong>UX research</strong> – Edraak – 2024
+        </li>
+        <li>
+          <strong>User interface design principles</strong> – Edraak – 2024
+        </li>
+      </ul>
+    <br>
+    <h3>Skills</h3>
+    <ul class="skills">
+      <li class="reveal">Figma</li>
+      <li class="reveal">HTML/CSS</li>
+      <li class="reveal">user research</li>
+      <li class="reveal">fast learning</li>
+      <li class="reveal">time management</li>
+      <li class="reveal">creativity</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section projects reveal">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <a href="مشروع اساليب الاقناع  2.pdf"><img id="pho" src="travel.jpg" height="150" width="170" alt="pic"></a>
+        <h3>Travel SA</h3>
+        <p>The website aims to become the preferred
+          reference for travelers in Saudi Arabia, providing up-to-date
+          information and encouraging tourism.</p>
+        <span>Tools: Figma</span>
+      </div>
+      
+      <div class="project-card">
+        <a href="Final submission .pdf"pdf><img id="pho" src="visual.jpg" height="150" width="170" alt="pic"></a>
+        <h3>Kawinly</h3>
+        <p>The app allowes the users to gain the full baking
+          experience, with limited ingredients and options.</p>
+          <br><br>
+        <span>Tools: Figma</span>
+      </div>
+
+      <div class="project-card">
+        <a href="Bank Database.pdf.pdf"pdf><img id="pho" src="bank.jpg" height="150" width="170" alt="pic"></a>
+        <h3>bank Database</h3>
+        <p>we made a bank Database and included chen`s notation, UML notation
+          , mapping, normalization for it.</p>
+          <br>
+        <span>Tools: SQL</span>
+      </div>
+
+      <div class="project-card">
+        <a href="information ar.final.pdf"pdf><img id="pho" src="information.jpg" height="150" width="170" alt="pic"></a>
+        <h3>HCI community</h3>
+        <p>the application helps HCI specialists, as it
+          provides some services that help them in several
+          aspects.</p>
+        <span>Tools: SQL</span>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="resume" class="section resume reveal">
+    <h2>Resume</h2>
+    <p>Download my resume below or explore my experience.</p>
+    <a href="resume Mawaddah.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
+
+  <section id="contact" class="section contact reveal">
+    <h2>Let's Connect</h2>
+    <p>Feel free to reach out to me via email or through my socials!</p>
+    <ul class="contact-links">
+      <li><a href="mailto:mawadastw@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/mawaddah-alotaibi-7b3658273/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 mawaddah. Designed & built with care.</p>
+  </footer>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <script>
+
+window.addEventListener("scroll", revealOnScroll);
+
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementBottom = el.getBoundingClientRect().bottom;
+      const revealPoint = 100;
+
+      if (elementTop < windowHeight - revealPoint && elementBottom > 0) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", revealOnScroll);
+  window.addEventListener("scroll", revealOnScroll);
+  </script>
+</body>
+</html>
