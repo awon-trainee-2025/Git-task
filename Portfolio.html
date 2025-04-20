@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Home">
+        <div class="intro">
+            <img src="professional-photo.webp" alt="Professional Photo">
+            <h1>Deema Bakhyer</h1>
+            <p>Computer Science student at Umm al-Qura University</p>
+        </div>
+    </section>
+
+    <section id="About">
+        <h2>About Me</h2>
+        <p>I am Deema Bakhyer, an enthusiastic Computer Science student eager to gain hands-on experience through co-op
+            opportunities in the IT field. I possess strong technical skills, including programming in Java, Python, and
+            SQL, as well as UI/UX development using HTML, CSS, and JavaScript.
+
+            I stand out for my creative thinking and teamwork abilities, demonstrated through various programming
+            projects such as a Clinic Management System and a Pharmacy System. Additionally, I have achieved notable
+            success in competitions, including securing second place in the "Occupational Health and Safety Hackathon."
+
+            I am committed to continuously enhancing my technical and interpersonal skills through active participation
+            in student activities and volunteering. I am also highly proficient in English.</p>
+    </section>
+
+    <section id="Projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="clinic.jpg" alt="Clinic System">
+            <h3>Clinic System</h3>
+            <p>
+                A Clinic System project manages patient records, appointments, and doctor schedules, streamlining
+                healthcare operations for clinics. The student project showcases database integration, user-friendly
+                interfaces, and essential medical functionalities..</p>
+            <a href="https://github.com/Deemabakhyer/university-projects/tree/7fa41c4cbabfc17d6fe6149b61de41ef6dd25bca/ClinicSystem"
+                target="_blank">Repository</a>
+        </div>
+        <div class="project">
+            <img src="pharmacy.jpg" alt="Pharmacy System">
+            <h3>Pharmacy System</h3>
+            <p>
+                A Pharmacy System project automates inventory management, prescription tracking, and sales processing
+                for pharmacies. The student project highlights real-time stock updates, secure prescription handling,
+                and billing integration.</p>
+            <a href="https://github.com/Deemabakhyer/university-projects/tree/7fa41c4cbabfc17d6fe6149b61de41ef6dd25bca/Pharmcy"
+                target="_blank">Repository</a>
+        </div>
+        <div class="project">
+            <img src="programmer.jpg" alt="Java Compiler">
+            <h3>Java Compiler</h3>
+            <p>
+                A Java Compiler project involves designing a tool to translate Java source code into bytecode executable
+                on the Java Virtual Machine (JVM). The student project typically demonstrates lexical analysis, parsing,
+                and code generation for basic Java programs.</p>
+            <a href="https://github.com/Deemabakhyer/university-projects/tree/7fa41c4cbabfc17d6fe6149b61de41ef6dd25bca/MyCompiler"
+                target="_blank">Repository</a>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <label for="skill1">Front end development</label>
+            <progress id="skill1" value="80" max="100"></progress>
+        </div>
+
+        <div class="skill">
+            <label for="skill2">Back end development</label>
+            <progress id="skill2" value="80" max="100"></progress>
+        </div>
+
+        <div class="skill">
+            <label for="skill3">Web development</label>
+            <progress id="skill3" value="80" max="100"></progress>
+        </div>
+
+        <div class="skill">
+            <label for="skill4">Software documentation</label>
+            <progress id="skill4" value="80" max="100"></progress>
+        </div>
+        
+    </section>
+
+    <section id="Contact">
+        <h2>Contact</h2>
+        <form action="submit-form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Deema Bakhyer. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
